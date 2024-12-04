@@ -1,0 +1,43 @@
+package Inicial;
+
+import java.util.Scanner;
+
+public class MATRIZ7 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num[][] = new int[4][4];
+		int linha=0,coluna=0,maiornum=0;
+		
+		Scanner leia = new Scanner(System.in);
+		
+		System.out.println("Entre com os numeros: ");
+		for(linha=0;linha<4;linha++) {
+			for(coluna=0;coluna<4;coluna++) {
+				num[linha][coluna] = leia.nextInt();
+				if(num[linha][coluna]>maiornum){
+					maiornum = num[linha][coluna];
+                }         
+			}
+		}
+		System.out.println("--------------------------------");
+		System.out.print("Matriz");
+		for(linha=0;linha<4;linha++) {
+			System.out.println();
+			for(coluna=0;coluna<4;coluna++) {
+				
+				System.out.print("["+num[linha][coluna]+"]");
+					
+			}
+		}
+		System.out.println("\n--------------------------------");
+
+		for(linha=0;linha<4;linha++) {
+			for(coluna=0;coluna<4;coluna++) {
+				if(maiornum == num[linha][coluna]) {
+					System.out.println("\nO maior numero é: "+maiornum+"\n e esta na linha "+linha+" e na coluna "+coluna);
+				}
+			}
+		  }
+	}
+}

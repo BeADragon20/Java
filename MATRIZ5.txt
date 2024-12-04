@@ -1,0 +1,33 @@
+package Inicial;
+
+import java.util.Scanner;
+
+public class MATRIZ5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner leia = new Scanner (System.in);
+		
+		int matriz[][]= new int[5][5];
+		int linha,coluna;
+				
+		System.out.println("\nEntre com os valores");
+		for(linha=0;linha<5;linha++) {
+			for(coluna=0;coluna<5;coluna++) {
+						
+				matriz[linha][coluna] = leia.nextInt();
+			}
+		}
+		System.out.print("Matriz");
+			for(linha=0;linha<5;linha++) {
+				System.out.println();
+				for(coluna=0;coluna<5;coluna++) {
+					
+					System.out.print("["+matriz[linha][coluna]+"]");
+						
+				}
+			}
+	}
+
+}
+

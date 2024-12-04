@@ -1,0 +1,77 @@
+package Inicial;
+
+import java.util.Scanner;
+
+public class MATRIZ9 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner leia = new Scanner(System.in); 
+
+		int matrizA[][]= new int[3][3];
+		int matrizB[][]= new int[3][3];
+		int matrizC[][]= new int[3][3];
+		
+		int linha,coluna;
+		System.out.println("Entre com o valor da MatrizA: ");
+		for(linha=0;linha<3;linha++) {
+			for(coluna=0;coluna<3;coluna++) {
+				
+				matrizA[linha][coluna]= leia.nextInt();
+			}
+		}
+		System.out.println("Entre com o valor da MatrizB: ");
+		for(linha=0;linha<3;linha++) {
+			for(coluna=0;coluna<3;coluna++) {
+				
+				matrizB[linha][coluna]= leia.nextInt();
+			}
+		}
+		System.out.println("\n--------------------------------");
+		System.out.print("Matriz A");
+		for(linha=0;linha<3;linha++) {
+			System.out.println();
+			for(coluna=0;coluna<3;coluna++) {
+				
+				System.out.print("["+matrizA[linha][coluna]+"]");
+					
+			}
+		}
+		System.out.println("\n--------------------------------");
+		System.out.print("Matriz B");
+		for(linha=0;linha<3;linha++) {
+			System.out.println();
+			for(coluna=0;coluna<3;coluna++) {
+				
+				System.out.print("["+matrizB[linha][coluna]+"]");
+					
+			}
+		}
+		for(linha=0;linha<3;linha++) {
+			for(coluna=0;coluna<3;coluna++) {
+				if(matrizA[linha][coluna] > matrizB[linha][coluna]) {
+					matrizC[linha][coluna] = matrizA[linha][coluna];
+				}
+				else {
+					matrizC[linha][coluna] = matrizB[linha][coluna];
+				}
+			}
+		}
+		for(linha=0;linha<3;linha++) {
+			for(coluna=0;coluna<3;coluna++) {
+				System.out.println("\n\nValor da MatrizC: "+ matrizC[linha][coluna]);
+			}
+		}
+		System.out.println("\n--------------------------------");
+		System.out.print("Matriz C");
+		for(linha=0;linha<3;linha++) {
+			System.out.println();
+			for(coluna=0;coluna<3;coluna++) {
+				
+				System.out.print("["+matrizC[linha][coluna]+"]");
+					
+			}
+		}
+	}
+}

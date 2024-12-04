@@ -1,0 +1,32 @@
+package Inicial;
+
+import java.util.Scanner;
+
+public class RE_MATRIZ_VETOR2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int matriz[][]= new int[3][3];
+		int vetor[]= new int[3];
+		int linha,coluna,x=0,count=0;
+		
+		Scanner leia = new Scanner(System.in);
+		
+		
+		for(linha=0;linha<3;linha++) { 
+			for(coluna=0;coluna<3;coluna++) { 
+				System.out.println("\nEntre com o valor da Matriz: "); 
+				matriz[coluna][linha] = leia.nextInt(); 
+				count = count + matriz[coluna][linha];
+			} 
+			vetor[x] = count;
+			count=0;
+			x++;
+
+		}
+		for(x=0;x<3;x++) {
+			System.out.println("\nVetor: "+vetor[x]);
+		}
+	}
+
+}

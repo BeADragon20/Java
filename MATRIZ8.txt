@@ -1,0 +1,47 @@
+package Inicial;
+
+import java.util.Scanner;
+
+public class MATRIZ8 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num[][] = new int[4][4];
+		int linha=0,coluna=0,x=10,cont=0;
+		
+		Scanner leia = new Scanner(System.in);
+		
+		System.out.println("Entre com os numeros: ");
+		for(linha=0;linha<4;linha++) {
+			for(coluna=0;coluna<4;coluna++) {
+				num[linha][coluna] = leia.nextInt();
+				
+			}
+		}
+		System.out.println("--------------------------------");
+		System.out.print("Matriz");
+		for(linha=0;linha<4;linha++) {
+			System.out.println();
+			for(coluna=0;coluna<4;coluna++) {
+				
+				System.out.print("["+num[linha][coluna]+"]");
+					
+			}
+		}
+		System.out.println("\n--------------------------------");
+
+		for(linha=0;linha<4;linha++) {
+			for(coluna=0;coluna<4;coluna++) {
+				if(x == num[linha][coluna]) {
+					System.out.println("\nO numero escolhido é: "+x+"\nE esta na linha "+linha+" e na coluna "+coluna);
+					cont++;
+				}
+				
+			}
+		  }
+		if(cont == 0) {
+			System.out.println("\nNão encontrado");
+		}
+	}
+
+}

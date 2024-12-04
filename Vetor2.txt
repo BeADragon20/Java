@@ -1,0 +1,29 @@
+package Inicial;
+
+import java.util.Scanner;
+
+public class Atividade_09_02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num[] = new int[5];  // Quantas posições o Vetor tem
+		int x,maior=0;
+		
+		Scanner leia = new Scanner(System.in); // Ler os valores
+		
+		for(x=0;x<5;x++) {
+			System.out.println("\nEntre com os valores da Atividade: ");
+			num[x] = leia.nextInt();
+			
+			
+			if(maior<num[x]) {
+				maior = num[x];
+				
+				}
+		}
+		
+		System.out.println("\nNota Máxima: "+maior);	
+		
+	}
+
+}

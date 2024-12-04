@@ -1,0 +1,51 @@
+package Inicial;
+
+import java.util.Scanner;
+
+public class Atividade01_06_02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		float num[] = new float[5];  // Quantas posições o Vetor tem
+		int opcao,x;
+		
+		Scanner leia = new Scanner(System.in); // Ler os valores
+		
+		for(x=0;x<5;x++) {
+			System.out.println("\nEntre com os valorees do vetor: ");
+			num[x] = leia.nextFloat();
+		}
+		
+		do {
+			System.out.println("\nMenu da Alegria");
+			System.out.println("\n0 - Finalizar Programa");
+			System.out.println("\n1 - Mostrar o vetor na ordem direta");
+			System.out.println("\n2 - Mostrar o vetor na ordem inversa");
+			System.out.println("\nDigite sua opção: ");
+			opcao = leia.nextInt();
+			
+			switch(opcao) {
+			case 0:
+				System.out.println("\nMuito obrigado por utilizar o nosso programa!");
+				break;
+			
+			case 1:
+				for(x=0;x<5;x++) {
+					System.out.println("\nVetor: "+num[x]);
+				}
+				break;
+			case 2:
+				for(x=4;x>=0;x--) {
+					System.out.println("\nVetor: "+num[x]);
+				}
+				break;
+			default:		
+					System.out.println("\nOpção Inválida!!!");
+				}
+
+		}while(opcao != 0);
+		
+	}
+
+}

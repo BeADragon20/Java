@@ -1,0 +1,46 @@
+package Inicial;
+
+import java.util.Scanner;
+
+public class MATRIZ3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		float matriz[][] = new float[3][3]; 
+		int x=0,num=0,Par=0,count=0,Impar=0;
+		int linha,coluna; 
+
+
+		Scanner leia = new Scanner(System.in); 
+
+		for(linha=0;linha<3;linha++) { 
+			for(coluna=0;coluna<3;coluna++) { 
+				
+				System.out.println("\nEntre com um valor: "); 
+				matriz[linha][coluna] = leia.nextFloat(); 
+				
+			} 
+		}
+		System.out.println("\n------------------------");
+
+		for(linha=0;linha<3;linha++) { 
+			for(coluna=0;coluna<3;coluna++) { 
+				
+				if(matriz[linha][coluna] % 2 == 1) {
+					System.out.println("\nNumeros ímpares: "+ matriz[linha][coluna]);
+				}
+			}
+		}
+		System.out.println("\n-------------------------");
+		for(linha=0;linha<3;linha++) { 
+			for(coluna=0;coluna<3;coluna++) {
+				if(matriz[linha][coluna] % 2 == 0) {
+					System.out.println("\nNumeros pares: "+ matriz[linha][coluna]);
+				}
+			}
+		}
+	       
+	}
+}
+
+

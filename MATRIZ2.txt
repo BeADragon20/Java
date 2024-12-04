@@ -1,0 +1,36 @@
+package Inicial;
+
+import java.util.Scanner;
+
+public class MATRIZ2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		float matriz[][] = new float[10][4]; 
+		int participante=0,bimestre=0;
+		float mediaMatriz[] = new float[5];
+		float somaMatriz=0;
+		
+		Scanner leia = new Scanner(System.in); 
+		System.out.println("\nEntre com as Notas: ");
+		for(participante=0;participante<5;participante++) { 
+			for(bimestre=0;bimestre<4;bimestre++) { 
+
+				matriz[participante][bimestre] = leia.nextFloat(); 
+				somaMatriz=matriz[participante][bimestre]+matriz[participante][bimestre]+matriz[participante][bimestre]+matriz[participante][bimestre];
+				mediaMatriz[participante]=somaMatriz/4;
+			}
+			
+		} 
+		System.out.println("A soma das notas:");
+		for(participante=0;participante<5;participante++) {	
+            System.out.println(" ["+participante+"]="+somaMatriz);
+  
+		}
+		System.out.println("A media das notas: ");
+		for(participante=0;participante<5;participante++) {
+			System.out.print(" ["+participante+"]=[" +mediaMatriz[participante]+"]");
+		}
+	}
+
+}

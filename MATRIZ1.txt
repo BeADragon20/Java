@@ -1,0 +1,52 @@
+package Inicial;
+
+import java.util.Scanner;
+
+public class MATRIZ1{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		float matriz[][] = new float[3][3]; 
+		float somaMatriz=0,somaMatrizseg=0,somaMatrizprin=0; 
+		int linha,coluna; 
+
+		Scanner leia = new Scanner(System.in); 
+
+		for(linha=0;linha<3;linha++) { 
+			for(coluna=0;coluna<3;coluna++) { 
+				
+				System.out.println("\nEntre com um valor: "); 
+				matriz[linha][coluna] = leia.nextFloat(); 
+
+				somaMatriz += matriz[linha][coluna]; 
+			} 
+		} 
+		
+
+		for(linha=0;linha<3;linha++) { 
+			for(coluna=0;coluna<3;coluna++) { 
+				if(linha == coluna) {
+					System.out.println("\nPosição Diagonal Principal [ "+linha+" , "+coluna+" ] = "+matriz[linha][coluna]); 
+					somaMatrizprin += matriz[linha][coluna];
+				}
+
+			} 
+		} 
+		System.out.println("\n------------------------------------------------------------");
+		System.out.println("\nSomatório dos valores da Matriz Diagonal Principal: "+somaMatrizprin);
+		System.out.println("\n------------------------------------------------------------");
+		for(linha=0;linha<3;linha++) { 
+			for(coluna=0;coluna<3;coluna++) { 
+				if((linha+coluna)==2) {
+					System.out.println("\nPosição Diagonal Secundária [ "+linha+" , "+coluna+" ] = "+matriz[linha][coluna]);
+					somaMatrizseg += matriz[linha][coluna];
+
+				}
+			} 
+		} 
+		System.out.println("\n------------------------------------------------------------");
+		System.out.println("\nSomatório dos valores da Matriz Diagonal Secundária: "+somaMatrizseg);
+		System.out.println("\n------------------------------------------------------------");
+		System.out.println("\nSomatório dos valores da Matriz: "+somaMatriz);
+	}
+}

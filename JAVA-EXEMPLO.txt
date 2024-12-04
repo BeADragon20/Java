@@ -1,0 +1,37 @@
+package Inicial;
+
+import java.util.Scanner;
+
+public class JavaInicial_30_01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int	x,num=0,soma=0,countImpar=0,countPar=0;
+		float n2,media;
+		
+		Scanner leia = new Scanner(System.in);
+		
+		for(x=1;x<=10;x++) {
+			soma += x; // soma = soma + x
+		}
+		System.out.println("\nA soma dos valores foi de: "+soma);
+		
+		media = soma / 10; // media dos numeros
+		
+		System.out.println("\nEntre com um numero: ");
+		num = leia.nextInt();
+		if(num % 2 == 0) {
+			countPar +=num;
+		}else {
+			countImpar++;
+		}
+		System.out.println("\nEntre com um número: ");
+		num = leia.nextInt();
+		
+		System.out.println("\nSomatório dos pares: "+countPar);
+		System.out.println("\nQuantidade de números ímpares: "+countImpar);
+	}
+	
+}
+
+

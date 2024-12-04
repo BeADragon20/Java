@@ -1,0 +1,34 @@
+package Inicial;
+
+import java.util.Scanner;
+
+public class Atividade3_09_02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num[] = new int[5];  // Quantas posições o Vetor tem
+		int num2[] = new int[5];
+		int x,somaVetor=0,count=0,soma1=0,soma2=0;
+		
+		Scanner leia = new Scanner(System.in); // Ler os valores
+		
+	
+		for(x=0;x<5;x++) {
+			System.out.println("\nEntre com os valores do Dado: ");
+			num[x] = leia.nextInt();
+			soma1 = soma1 + num[x];
+		}
+		for(x=0;x<5;x++) {
+			System.out.println("\nEntre com os valores do Dado: ");
+			num2[x] = leia.nextInt();
+			soma2 = soma2 + num[x];
+			
+		}
+		somaVetor = ((soma1 + soma2)/10);
+		
+			
+			System.out.println("\nValor da soma dos Vetores na posição: "+somaVetor);
+		
+	}
+
+}

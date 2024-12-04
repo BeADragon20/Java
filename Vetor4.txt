@@ -1,0 +1,25 @@
+package Inicial;
+
+import java.util.Scanner;
+
+public class Atividade4_20_02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner leia = new Scanner(System.in); // Ler os valores
+		
+			int vetorA[] = {1,0,5,-2,-5,7};  // Quantas posições o Vetor tem
+			int x=0,soma=0;
+			
+			soma=vetorA[0]+vetorA[1]+vetorA[5];
+			
+			vetorA[4] = 100;
+			
+			//System.out.println(vetorA[0]+"\n"+"\n"+vetorA[1]+"\n"+"\n"+vetorA[2]+"\n"+"\n"+vetorA[3]+"\n"+"\n"+vetorA[4]+"\n"+"\n"+vetorA[5]);
+			for(x=0;x<6;x++) {
+				System.out.println("\n"+vetorA[x]);
+			}
+			System.out.println("\n Soma dos Vetores: "+soma);
+		}
+	 
+	}

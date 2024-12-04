@@ -1,0 +1,54 @@
+package Inicial;
+
+import java.util.Scanner;
+
+public class Atividade5_20_02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner leia = new Scanner(System.in);
+		int Vet[] = new int[6];
+		int x=0,num=0,Par=0,count=0,Impar=0;
+		
+		for(x=0;x<6;x++) {
+			System.out.println("\nEntre com os valores: ");
+			Vet[x] = leia.nextInt();
+			
+            if(Vet[x]%2==0){
+            	
+               Par=Par+1; 
+              
+            }else{
+			count++;
+			Impar = Vet[x];	
+			
+            }
+			
+		}
+		System.out.println("\n-----------------------------------------------");
+		for(x=0;x<6;x++) {
+			if(Vet[x] % 2 == 0) {
+			System.out.println("\nMostrar numero par: "+ Vet[x]);
+			}
+		}
+		
+		System.out.println("\n-----------------------------------------------");
+		
+		System.out.println("\nNo total temos " + Par + " números pares." );
+		
+		System.out.println("\n-----------------------------------------------");
+
+		for(x=0;x<6;x++) {
+			if(Vet[x] % 2 == 1) {
+				System.out.println("\nMostrar numero ímpar: "+ Vet[x]);
+				}
+		}
+		
+		System.out.println("\n-----------------------------------------------");
+
+		System.out.println("\nQuantos numeros impares: "+count);
+		
+
+	}
+
+}

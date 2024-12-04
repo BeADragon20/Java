@@ -1,0 +1,40 @@
+package Inicial;
+
+import java.util.Scanner;
+
+public class VETOR1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int vetorA[] = new int[5];
+		int vetorB[] = new int[5];
+		int vetorC[] = new int[10];
+		int x=0,y=0,z=0;
+		
+		Scanner leia = new Scanner(System.in);
+		
+		for(x=0;x<5;x++) {
+			System.out.println("Entre com o valor do VetorA: ");
+			vetorA[x] = leia.nextInt();
+		}
+		for(x=0;x<5;x++) {
+			System.out.println("Entre com o valor do VetorB: ");
+			vetorB[x] = leia.nextInt();
+		}
+		for(x=0;x<10;x++) {
+			if(x % 2 == 0){
+				vetorC[x]=vetorA[y];
+				y++;
+			}
+			else {
+				vetorC[x]=vetorB[z];
+				z++;
+			}
+		}
+		for(x=0;x<10;x++) {
+			System.out.println("Valor do vetorC: "+vetorC[x]);
+		}
+
+	}
+
+}
